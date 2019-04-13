@@ -5,8 +5,4 @@ node('master') {
       'mvn install'
     }
   }
-  stage('Results'){
-    junit '**/target/surefire-reports/TEST-*.xml'
-    archive 'target/*.jar'
-  }
 }
